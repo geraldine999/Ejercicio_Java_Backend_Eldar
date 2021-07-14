@@ -1,7 +1,5 @@
 package com.example.ejercicio_java_backend_eldar;
 
-import org.springframework.stereotype.Component;
-
 import java.time.LocalDate;
 
 
@@ -58,13 +56,10 @@ public abstract class Tarjeta implements TarjetaInterface {
 
     //---------------------------------
 
-    public Boolean tarjetaValida(){
+    public Boolean tarjetaEsValida(){
         LocalDate hoy = LocalDate.now();
-        if(hoy.isBefore(fechaDeVencimiento)) {
-            return true;
-        }else{
-            return false;
-        }}
+        return hoy.isBefore(fechaDeVencimiento);
+    }
 
 
     public String informarMarca() {

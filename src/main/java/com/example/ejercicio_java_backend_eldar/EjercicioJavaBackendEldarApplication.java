@@ -11,11 +11,6 @@ public class EjercicioJavaBackendEldarApplication {
     public static void main(String[] args) {
         SpringApplication.run(EjercicioJavaBackendEldarApplication.class, args);
 
-        //TODO cuales excepciones??
-        //TODO separar en carpetas?
-
-
-
         // 1) Crear una clase ejecutable con 3 objetos que haga lo siguiente:
         //Invocar un método que devuelva toda la información de una tarjeta
         //Informar si una operación es valida--
@@ -36,14 +31,14 @@ public class EjercicioJavaBackendEldarApplication {
         System.out.println(tarjeta3.toString());
 
         //Informar si una operación es valida--
-        System.out.println(Operacion.operacionValida(5000.00));
-        System.out.println(Operacion.operacionValida(800.00));
-        System.out.println(Operacion.operacionValida(1000.00));
+        System.out.println(Operacion.operacionEsValida(5000.00));
+        System.out.println(Operacion.operacionEsValida(800.00));
+        System.out.println(Operacion.operacionEsValida(1000.00));
 
         //Informar si una tarjeta es válida para operar--
-        System.out.println(tarjeta1.tarjetaValida());
-        System.out.println(tarjeta2.tarjetaValida());
-        System.out.println(tarjeta3.tarjetaValida());
+        System.out.println(tarjeta1.tarjetaEsValida());
+        System.out.println(tarjeta2.tarjetaEsValida());
+        System.out.println(tarjeta3.tarjetaEsValida());
 
         //Identificar si una tarjeta es distinta a otra--
         System.out.println(tarjeta1.equals(tarjeta2));
@@ -53,10 +48,6 @@ public class EjercicioJavaBackendEldarApplication {
         System.out.println(Operacion.calcularTasaDeOperacion(MarcasTarjeta.AMEX, 5000.00));//esta operacion no es valida porque el importe es > 1000.00, por lo tanto, da null
         System.out.println(Operacion.calcularTasaDeOperacion(MarcasTarjeta.NARA, 200.00));
 
-
-
     }
-
-
 
 }
