@@ -1,9 +1,7 @@
 package com.example.ejercicio_java_backend_eldar;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Locale;
 
 @RestController
@@ -17,11 +15,11 @@ public class OperacionController {
 
     @PostMapping(produces = "application/json")
     @ResponseBody
-    public List<Double> consultarTasaDeOperacion(@RequestBody Operacion operacion){
+    public Double consultarTasaDeOperacion(@RequestBody Operacion operacion){
         String marca= operacion.getMarca().toUpperCase(Locale.ROOT);
         Double importe = operacion.getImporte();
         MarcasTarjeta marcaTarjeta= MarcasTarjeta.valueOf(marca);
-        return List.of((Operacion.calcularTasaDeOperacion(marcaTarjeta, importe)));
+        return (Operacion.calcularTasaDeOperacion(marcaTarjeta, importe));
         }
 
     }

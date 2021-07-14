@@ -17,8 +17,6 @@ public abstract class Tarjeta implements TarjetaInterface {
         this.fechaDeVencimiento = fechaDeVencimiento;
     }
 
-
-
     @Override
     public String toString() {
         return "Tarjeta{" +
@@ -54,7 +52,6 @@ public abstract class Tarjeta implements TarjetaInterface {
         this.fechaDeVencimiento = fechaDeVencimiento;
     }
 
-    //---------------------------------
 
     public Boolean tarjetaEsValida(){
         LocalDate hoy = LocalDate.now();
